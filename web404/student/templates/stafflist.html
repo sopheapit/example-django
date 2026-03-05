@@ -1,0 +1,22 @@
+{% extends 'layout_2.html' %}
+{% block title %}  Staff List {% endblock title %}
+
+{% block content %}
+<div class="card-deck">
+    {% for st in staff_list %}
+  <div class="card">
+    <img src="/media/{{st.photo}}" class="card-img-top" alt="..."
+    style="width:100%; height:260px; object-fit:cover"
+    >
+    <div class="card-body">
+      <h5 class="card-title">{{ st.full_name}}</h5>
+      <p class="card-text">Gender : {{st.gender}}</p>
+        <p class="card-text">Phone : {{st.phone}}</p>
+      <p class="card-text">E-mail : {{st.email}}</p>
+  <a href="/detail/{{st.id}}" class="btn btn-primary" style="float:right"> Detail </a>
+    </div>
+  </div>
+   {% endfor %}
+</div>
+
+{% endblock content %}

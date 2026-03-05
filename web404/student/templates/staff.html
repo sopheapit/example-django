@@ -1,0 +1,25 @@
+{% extends 'layout_2.html' %}
+{% block title %} Staff List {% endblock title %}
+{% block content %}
+<table class="table">
+    <tr>
+        <td>Full Name</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Email</td>
+        <td>Photo</td>
+    </tr>
+    {% for st in staff_list %}
+        <tr>
+            <td>{{ st.full_name }}</td>
+            <td>{{ st.gender }}</td>
+            <td>{{st.phone}}</td>
+            <td>{{st.email}}</td>
+            <td>
+                <img src="/media/{{st.photo}}" width="100" />
+            </td>
+         </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

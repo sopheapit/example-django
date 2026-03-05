@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+<div>
+    <div style="width:25%; font-size:32px; font-weight:bold; float:left">
+        Web 404
+    </div>
+    <div style="width: 70%; float:left; text-align:center">
+        <ul>
+            <li> <a href="/home/"> Home</a> </li>
+            <li> <a href="/about/"> About Us</a> </li>
+            <li> <a href="/contact/"> Contact </a> </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    ul li{
+    float:left;
+    margin:15px;
+    }
+    li:hover{
+        font-weight:bold;
+        text-decoration:underline;
+    }
+</style>
+<div style="clear:both"></div>
+<div style="width:100%">
+{% block content %}
+
+{% endblock content %}
+</div>
+</body>
+</html>
