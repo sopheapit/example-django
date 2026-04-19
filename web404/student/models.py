@@ -15,3 +15,8 @@ class Staff(models.Model):
     email=models.CharField(max_length=100)
     address=models.TextField()
     photo=models.ImageField(upload_to='photo/',default=None)
+class Contactus(models.Model):
+    full_name=models.CharField(max_length=250)
+    phone=models.CharField(max_length=100)
+    email=models.CharField(max_length=100)
+    detail=models.TextField()
